@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Solution - Home</title>
+
+    <!-- Bootstrap CSS (ডিজাইন লাইব্রেরি) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- আইকন লাইব্রেরি -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- বাংলা + ইংরেজি ফন্ট -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- আমাদের নিজের CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- ========== Navbar শুরু ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-5 fw-bold" href="index.html">
+                <i class="fas fa-cogs" style="color: #e67e22;"></i> AZ Solution
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Tools.html">Employee Tools</a></li>
+                </ul>
+                <!-- কার্ট বাটন -->
+                <a href="cart.html" class="btn btn-outline-primary btn-sm position-relative rounded-pill px-3">
+                    <i class="fas fa-shopping-bag me-1"></i> Cart
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- ========== Navbar শেষ ========== -->
+
+    <!-- ========== Hero সেকশন ========== -->
+    <div class="hero-section d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-2 fw-bold mb-3">Welcome to AZ Solution</h1>
+            <p class="lead mb-4">Discover the best testing equipment and machinery for your business needs.</p>
+            <a href="products.html" class="btn btn-primary btn-lg">
+                Shop Now <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- ========== Featured Products ========== -->
+    <div class="container mb-5 flex-grow-1 mt-4">
+        <h2 class="text-center mb-4">Featured Products</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <!-- প্রোডাক্ট ১ -->
+            <div class="col">
+                <div class="card h-100 product-card">
+                    <img src="images/GSM Cutter.avif" class="card-img-top product-img" alt="GSM Cutter">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title">GSM Cutter</h6>
+                        <div class="mt-auto">
+                            <p class="price-tag mb-2">৳ 4,500</p>
+                            <!-- View Details বাটন - URL দিয়ে ডাটা পাঠাচ্ছে -->
+                            <a href="details.html?name=GSM%20Cutter&price=4500&img=images/GSM%20Cutter.avif&cat=Textile%20Testing&desc=High-quality%20Round%20GSM%20Cutter%20for%20accurate%20measurement%20of%20fabric%20weight." 
+                               class="btn btn-outline-primary w-100">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- প্রোডাক্ট ২ -->
+            <div class="col">
+                <div class="card h-100 product-card">
+                    <img src="images/Color Matching Cabinet.jpg" class="card-img-top product-img" alt="Color Matching Cabinet">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title">Color Matching Cabinet</h6>
+                        <div class="mt-auto">
+                            <p class="price-tag mb-2">৳ 25,500</p>
+                            <a href="details.html?name=Color%20Matching%20Cabinet&price=25500&img=images/Color%20Matching%20Cabinet.jpg&cat=Fabric%20Testing&desc=Standard%20color%20matching%20cabinet%20used%20for%20visual%20evaluation%20of%20color%20differences%20under%20various%20light%20sources." 
+                               class="btn btn-outline-primary w-100">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- প্রোডাক্ট ৩ -->
+            <div class="col">
+                <div class="card h-100 product-card">
+                    <img src="images/Textile Moisture Meter.jpg" class="card-img-top product-img" alt="Textile Moisture Meter">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title">Textile Moisture Meter</h6>
+                        <div class="mt-auto">
+                            <p class="price-tag mb-2">৳ 8,200</p>
+                            <a href="details.html?name=Textile%20Moisture%20Meter&price=8200&img=images/Textile%20Moisture%20Meter.jpg&cat=Yarn%20Testing&desc=Accurate%20moisture%20meter%20designed%20specifically%20for%20the%20textile%20industry." 
+                               class="btn btn-outline-primary w-100">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== Footer ========== -->
+    <footer class="bg-dark text-center py-4 mt-auto">
+        <div class="container text-white">
+            <p class="mb-1"><strong>Proprietor: Aminul Islam</strong></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Navbar কাজ করার জন্য লাগে) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========== এই পেজের JavaScript ========== -->
+    <script>
+        // Note: LocalStorage থেকে কার্টের ডাটা নিয়ে আসা
+        // যদি কিছু না থাকে তাহলে খালি অ্যারে [] রাখবে
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Note: Navbar এর কার্ট ব্যাজে সংখ্যা দেখানোর ফাংশন
+        function updateCartUI() {
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                let totalItems = 0;
+                // প্রতিটা আইটেমের quantity যোগ করা
+                for (let i = 0; i < cart.length; i++) {
+                    totalItems = totalItems + cart[i].quantity;
+                }
+                cartCountElement.innerText = totalItems;
+            }
+        }
+
+        // Note: পেজ লোড হওয়ার সাথে সাথে কার্ট আপডেট করা
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>

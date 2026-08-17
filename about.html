@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Contact - AZ Solution</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-5 fw-bold" href="index.html">
+                <i class="fas fa-cogs" style="color: #e67e22;"></i> AZ Solution
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Tools.html">Employee Tools</a></li>
+                </ul>
+                <a href="cart.html" class="btn btn-dark btn-sm position-relative rounded-pill px-3">
+                    <i class="fas fa-shopping-bag me-1"></i> Cart
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- পেজ হেডার -->
+    <div class="about-hero text-center px-3">
+        <div class="container">
+            <h1 class="fw-bold mb-2" style="color: #2c3e50;">AZEM Sewing & Engineering Works</h1>
+            <h4 class="bn-text text-muted mb-0">আজিম সুইং এন্ড ইঞ্জিনিয়ারিং ওয়ার্কস</h4>
+        </div>
+    </div>
+
+    <div class="container my-5 flex-grow-1">
+
+        <!-- Who We Are -->
+        <div class="row justify-content-center mb-5 pb-4 border-bottom">
+            <div class="col-lg-12">
+                <h3 class="section-title mb-4">Who We Are</h3>
+
+                <p class="content-text bn-text mb-3">
+                    আমরা দীর্ঘ সময় ধরে অত্যন্ত বিশ্বস্ততার সাথে গার্মেন্টস এবং টেক্সটাইল ইন্ডাস্ট্রির জন্য প্রয়োজনীয় যন্ত্রাংশ ও সেবা প্রদান করে আসছি। আমরা মূলত গার্মেন্টস স্পেয়ার পার্টস এবং মেশিনারিজের বিশ্বস্ত পাইকারি (Wholesale) ও খুচরা বিক্রেতা।
+                </p>
+
+                <p class="content-text mb-5">
+                    As a dedicated manufacturer and wholesale supplier, we specialize in supporting the garments and textile industry with high-quality products, reliable spare parts in bulk quantities, and expert engineering services.
+                </p>
+
+                <h4 class="fw-bold mb-4 text-center" style="color: #2c3e50;">What We Do</h4>
+                
+                <div class="feature-box">
+                    <ul class="feature-list bn-text">
+                        <li>
+                            <strong>ম্যানুফ্যাকচারিং:</strong> 
+                            ইন্ডাস্ট্রিয়াল গার্মেন্টস সুইং মেশিন, সুতা, ব্যাগ, টুপি, পুতুল, চামড়া সামগ্রী এবং এমব্রয়ডারী কাটিং ডাইস, নাইফ, ফোল্ডার ইত্যাদি নিজস্ব তত্ত্বাবধানে তৈরী করা হয়।
+                        </li>
+                        <li>
+                            <strong>পাইকারি ও খুচরা বিক্রয় (Wholesale & Retail):</strong> 
+                            গার্মেন্টস যাবতীয় স্পেয়ার পার্টস অত্যন্ত সুলভ মূল্যে পাইকারি ও খুচরা বিক্রয় করা হয়।
+                        </li>
+                        <li>
+                            <strong>সার্ভিসিং:</strong> 
+                            দক্ষ টেকনিশিয়ান দ্বারা মেশিনের নিখুঁত রিপেয়ার ও সার্ভিসিং এর শতভাগ নিশ্চয়তা দেওয়া হয়।
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact সেকশন -->
+        <div id="contact" class="row justify-content-center pt-3">
+            <div class="col-lg-12">
+                <h3 class="section-title mb-4">Get In Touch</h3>
+
+                <div class="card p-4 border mb-5">
+                    
+                    <!-- সাকসেস মেসেজ (শুরুতে লুকানো) -->
+                    <div id="success-box" style="display: none;" class="text-center py-4">
+                        <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+                        <h4 class="mb-2" style="color: #2c3e50;">Message Sent Successfully!</h4>
+                        <p class="text-muted mb-4">Your response has been recorded in our database.</p>
+                        <button type="button" onclick="resetForm()" class="btn btn-outline-dark px-4 rounded-pill">
+                            Submit another response
+                        </button>
+                    </div>
+
+                    <!-- Contact Form (Google Form এ যায়) -->
+                    <form id="contact-form" 
+                          action="https://docs.google.com/forms/d/e/1FAIpQLSdD-IkJkKEiAb5UubBzKDPk45iW5KshKyV86stoAcnxYmSStg/formResponse" 
+                          method="POST" 
+                          target="hidden_iframe" 
+                          onsubmit="handleFormSubmit();">
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label text-muted fw-semibold">Name</label>
+                                <input type="text" name="entry.903909563" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label text-muted fw-semibold">Email</label>
+                                <input type="email" name="entry.439871079" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label text-muted fw-semibold">Message</label>
+                            <textarea name="entry.797642268" class="form-control" rows="5" 
+                                      placeholder="How can we help? Or ask for wholesale prices..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn text-white w-100 py-2 rounded-pill fw-bold" 
+                                style="background-color: #2c3e50;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-box">
+                    <h5 class="text-center fw-bold mb-4" style="color: #2c3e50;">Contact Information</h5>
+
+                    <div class="row bn-text">
+                        <div class="col-md-4">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">আমাদের ঠিকানা</small>
+                                    <strong>ছালেহ্ বিল্ডিং, দেওয়ানহাট মোড়, চট্টগ্রাম।</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">হটলাইন নম্বর</small>
+                                    <strong>
+                                        01844-829777<br>
+                                        01925-205804<br>
+                                        01601-946933
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Email</small>
+                                    <strong>
+                                        <a href="mailto:azemsewingengineeringworks@gmail.com" class="text-dark text-decoration-none">
+                                            azemsewingengineeringworks@gmail.com
+                                        </a>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Form এর জন্য লুকানো iframe -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <footer class="bg-dark text-center py-4 mt-auto">
+        <div class="container text-white">
+            <p class="mb-1"><strong>Proprietor: Aminul Islam</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========== এই পেজের JavaScript ========== -->
+    <script>
+        // Note: কার্ট সংখ্যা দেখানোর জন্য
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function updateCartUI() {
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                let totalItems = 0;
+                for (let i = 0; i < cart.length; i++) {
+                    totalItems = totalItems + cart[i].quantity;
+                }
+                cartCountElement.innerText = totalItems;
+            }
+        }
+
+        // Note: ফর্ম সাবমিট হলে সাকসেস মেসেজ দেখানো
+        function handleFormSubmit() {
+            setTimeout(function() {
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('success-box').style.display = 'block';
+            }, 500);
+        }
+
+        // Note: আবার ফর্ম দেখানোর জন্য
+        function resetForm() {
+            document.getElementById('contact-form').reset();
+            document.getElementById('success-box').style.display = 'none';
+            document.getElementById('contact-form').style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>

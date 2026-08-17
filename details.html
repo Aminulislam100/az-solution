@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - AZ Solution</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-5 fw-bold" href="index.html">
+                <i class="fas fa-cogs" style="color: #e67e22;"></i> AZ Solution
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Tools.html">Employee Tools</a></li>
+                </ul>
+                <a href="cart.html" class="btn btn-dark btn-sm position-relative rounded-pill px-3">
+                    <i class="fas fa-shopping-bag me-1"></i> Cart
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- প্রোডাক্ট ডিটেইলস সেকশন -->
+    <div class="container my-5 flex-grow-1">
+        <div class="card border">
+            <div class="row g-0">
+
+                <!-- বাম পাশে ছবি -->
+                <div class="col-md-5 bg-white p-4 d-flex align-items-center justify-content-center border-end">
+                    <img id="detail-img" 
+                         src="https://placehold.co/500x500/eeeeee/333333?text=Loading..." 
+                         class="img-fluid rounded" 
+                         alt="Product Image">
+                </div>
+
+                <!-- ডান পাশে তথ্য -->
+                <div class="col-md-7">
+                    <div class="card-body p-4">
+                        <span id="detail-category" class="badge bg-primary mb-2">Category</span>
+                        
+                        <h2 id="detail-title" class="fw-bold mb-3">Loading Name...</h2>
+                        
+                        <h3 id="detail-price" class="text-danger fw-bold mb-4">৳ 0</h3>
+                        
+                        <p id="detail-desc" class="text-muted mb-4">
+                            Please wait, product description is loading...
+                        </p>
+
+                        <ul class="list-unstyled mb-4 text-muted">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Premium Quality Material</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Highly Accurate & Reliable</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Industrial Standard Approved</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Warranty: 1 Year Service Warranty</li>
+                        </ul>
+
+                        <div class="d-grid gap-2 d-md-flex">
+                            <!-- Add to Cart বাটন (শুরুতে খালি data আছে, পরে JS দিয়ে ভর্তি হবে) -->
+                            <button id="detail-add-cart-btn" 
+                                    class="btn btn-success btn-lg px-4 me-md-2 add-to-cart-btn"
+                                    data-name="" 
+                                    data-price="" 
+                                    data-img="">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            
+                            <a href="cart.html" class="btn btn-outline-primary btn-lg px-4">
+                                <i class="fas fa-shopping-bag"></i> Go to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center py-4 mt-auto">
+        <div class="container text-white">
+            <p class="mb-1"><strong>Proprietor: Aminul Islam</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========== এই পেজের JavaScript ========== -->
+    <script>
+        // Note: LocalStorage থেকে কার্ট লোড
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Note: Navbar এ কার্ট সংখ্যা দেখানো
+        function updateCartUI() {
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                let totalItems = 0;
+                for (let i = 0; i < cart.length; i++) {
+                    totalItems = totalItems + cart[i].quantity;
+                }
+                cartCountElement.innerText = totalItems;
+            }
+        }
+
+        // Note: Add to Cart বাটনে ক্লিক হলে
+        document.addEventListener('click', function(event) {
+            const button = event.target.closest('.add-to-cart-btn');
+            
+            if (button) {
+                const name = button.getAttribute('data-name');
+                const price = parseInt(button.getAttribute('data-price'));
+                const img = button.getAttribute('data-img');
+
+                let found = false;
+                
+                // আগে থেকে আছে কিনা চেক
+                for (let i = 0; i < cart.length; i++) {
+                    if (cart[i].name === name) {
+                        cart[i].quantity = cart[i].quantity + 1;
+                        found = true;
+                        break;
+                    }
+                }
+
+                // না থাকলে নতুন যোগ করা
+                if (found === false) {
+                    cart.push({
+                        name: name,
+                        price: price,
+                        img: img,
+                        quantity: 1
+                    });
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartUI();
+                alert(name + " added to your cart!");
+            }
+        });
+
+        // Note: URL থেকে প্রোডাক্টের তথ্য নিয়ে পেজে দেখানো
+        function loadProductDetails() {
+            // URL এর প্যারামিটারগুলো নেওয়া (name, price, img ইত্যাদি)
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            const name = urlParams.get('name');
+            const price = urlParams.get('price');
+            const img = urlParams.get('img');
+            const desc = urlParams.get('desc');
+            const cat = urlParams.get('cat');
+
+            // যদি name থাকে তাহলে পেজে দেখাও
+            if (name && document.getElementById('detail-title')) {
+                document.getElementById('detail-title').innerText = name;
+                document.getElementById('detail-price').innerText = "৳ " + price;
+                document.getElementById('detail-img').src = img;
+                document.getElementById('detail-img').alt = name;
+
+                if (desc) {
+                    document.getElementById('detail-desc').innerText = desc;
+                }
+                
+                if (cat) {
+                    document.getElementById('detail-category').innerText = cat;
+                }
+
+                // Add to Cart বাটনের data অ্যাট্রিবিউট আপডেট করা
+                const addCartBtn = document.getElementById('detail-add-cart-btn');
+                
+                if (addCartBtn) {
+                    addCartBtn.setAttribute('data-name', name);
+                    addCartBtn.setAttribute('data-price', price);
+                    addCartBtn.setAttribute('data-img', img);
+                }
+            }
+        }
+
+        // Note: পেজ লোড হলে দুইটা কাজ করো
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartUI();        // কার্ট সংখ্যা দেখাও
+            loadProductDetails();  // প্রোডাক্টের তথ্য লোড করো
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* ============================================
+   AZ Solution - Simple Stylesheet
+   বিগিনারদের জন্য খুব সহজ করে লেখা
+   ============================================ */
+
+/* পুরো ওয়েবসাইটের বেসিক স্টাইল */
+body {
+    background-color: #f8f9fa;          /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/* বাংলা টেক্সটের জন্য আলাদা ফন্ট */
+.bn-text {
+    font-family: 'Noto Sans Bengali', sans-serif;
+}
+
+/* Navbar এর ব্র্যান্ড নাম */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* প্রোডাক্ট কার্ডের স্টাইল */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+.product-card:hover {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);   /* মাউস নিলে হালকা শ্যাডো */
+}
+
+/* হোম পেজের প্রোডাক্ট ইমেজ */
+.product-img {
+    height: 180px;
+    object-fit: contain;     /* ছবির আকার ঠিক রাখে */
+    padding: 10px;
+    background: white;
+}
+
+/* Products পেজের প্রোডাক্ট ইমেজ */
+.product-img-fixed {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    padding: 10px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #eee;
+}
+
+/* দামের রং */
+.price-tag {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* ক্যাটাগরি ফিল্টারে ক্লিক করা যায় */
+.category-filter {
+    cursor: pointer;
+}
+
+.category-filter:hover {
+    background-color: #f0f0f0;
+}
+
+/* হোম পেজের Hero সেকশন */
+.hero-section {
+    background: linear-gradient(rgba(8, 176, 218, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('images/Hero3.gif') no-repeat center center;
+    background-size: cover;
+    color: white;
+    min-height: 400px;
+    padding: 60px 0;
+    margin-bottom: 30px;
+}
+
+/* About পেজের হেডার */
+.about-hero {
+    background-color: #f1f3f5;
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-title {
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-text {
+    line-height: 1.7;
+    color: #555;
+    text-align: center;
+}
+
+.feature-box {
+    background: white;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+}
+
+/* Contact বক্স */
+.contact-box {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #eee;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e8f4f8;
+    color: #2c3e50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+/* Tools পেজ */
+.tools-hero {
+    background-color: #f1f3f5;
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+
+.iframe-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 140vh;
+    border: none;
+}
+
+.tool-title {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    margin: 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-box {
+    background: white;
+    border-radius: 8px;
+    padding: 30px 25px;
+    border: 1px solid #ddd;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: white;
+}
