@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZ Solution - Home</title>
 
-    <!-- Bootstrap CSS (ডিজাইন লাইব্রেরি) -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- আইকন লাইব্রেরি -->
+    <!-- Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- বাংলা + ইংরেজি ফন্ট -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- আমাদের নিজের CSS -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- ========== Navbar শুরু ========== -->
+    <!-- ========== Navbar ========== -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top">
         <div class="container">
             <a class="navbar-brand fs-5 fw-bold" href="index.html">
@@ -30,23 +30,21 @@
                     <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="Tools.html">Employee Tools</a></li>
                 </ul>
-                <!-- কার্ট বাটন -->
-                <a href="cart.html" class="btn btn-outline-primary btn-sm position-relative rounded-pill px-3">
+                <!-- Cart Button -->
+                <a href="cart.html" class="btn btn-dark btn-sm position-relative rounded-pill px-3">
                     <i class="fas fa-shopping-bag me-1"></i> Cart
                     <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
                 </a>
             </div>
         </div>
     </nav>
-    <!-- ========== Navbar শেষ ========== -->
 
-    <!-- ========== Hero সেকশন ========== -->
+    <!-- ========== Hero Section ========== -->
     <div class="hero-section d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1 class="display-2 fw-bold mb-3">Welcome to AZ Solution</h1>
+            <h1 class="display-5 fw-bold mb-3">Welcome to AZ Solution</h1>
             <p class="lead mb-4">Discover the best testing equipment and machinery for your business needs.</p>
             <a href="products.html" class="btn btn-primary btn-lg">
                 Shop Now <i class="fas fa-arrow-right ms-2"></i>
@@ -59,7 +57,7 @@
         <h2 class="text-center mb-4">Featured Products</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
-            <!-- প্রোডাক্ট ১ -->
+            <!-- Product 1 -->
             <div class="col">
                 <div class="card h-100 product-card">
                     <img src="images/GSM Cutter.avif" class="card-img-top product-img" alt="GSM Cutter">
@@ -67,7 +65,6 @@
                         <h6 class="card-title">GSM Cutter</h6>
                         <div class="mt-auto">
                             <p class="price-tag mb-2">৳ 4,500</p>
-                            <!-- View Details বাটন - URL দিয়ে ডাটা পাঠাচ্ছে -->
                             <a href="details.html?name=GSM%20Cutter&price=4500&img=images/GSM%20Cutter.avif&cat=Textile%20Testing&desc=High-quality%20Round%20GSM%20Cutter%20for%20accurate%20measurement%20of%20fabric%20weight." 
                                class="btn btn-outline-primary w-100">
                                 <i class="fas fa-eye"></i> View Details
@@ -77,7 +74,7 @@
                 </div>
             </div>
 
-            <!-- প্রোডাক্ট ২ -->
+            <!-- Product 2 -->
             <div class="col">
                 <div class="card h-100 product-card">
                     <img src="images/Color Matching Cabinet.jpg" class="card-img-top product-img" alt="Color Matching Cabinet">
@@ -94,7 +91,7 @@
                 </div>
             </div>
 
-            <!-- প্রোডাক্ট ৩ -->
+            <!-- Product 3 -->
             <div class="col">
                 <div class="card h-100 product-card">
                     <img src="images/Textile Moisture Meter.jpg" class="card-img-top product-img" alt="Textile Moisture Meter">
@@ -114,6 +111,27 @@
         </div>
     </div>
 
+    <!-- ========== Location Map ========== -->
+    <div class="container mb-5">
+        <h4 class="text-center mb-3 fw-bold" style="color: #2c3e50;">Welcome to Our Shop</h4>
+        
+        <div class="rounded overflow-hidden border" style="height: 280px;">
+            <!-- এখানে তোমার আসল Google Maps Embed কোড বসাবে -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.123456789!2d91.8123!3d22.3412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDIwJzI4LjMiTiA5McKwNDgnNDQuMyJF!5e0!3m2!1sen!2sbd!4v1234567890"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <p class="text-center mt-2 text-muted bn-text">
+            ছালেহ্ বিল্ডিং, দেওয়ানহাট মোড়, চট্টগ্রাম
+        </p>
+    </div>
+
     <!-- ========== Footer ========== -->
     <footer class="bg-dark text-center py-4 mt-auto">
         <div class="container text-white">
@@ -121,21 +139,19 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS (Navbar কাজ করার জন্য লাগে) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ========== এই পেজের JavaScript ========== -->
+    <!-- ========== JavaScript ========== -->
     <script>
-        // Note: LocalStorage থেকে কার্টের ডাটা নিয়ে আসা
-        // যদি কিছু না থাকে তাহলে খালি অ্যারে [] রাখবে
+        // LocalStorage থেকে কার্ট লোড
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        // Note: Navbar এর কার্ট ব্যাজে সংখ্যা দেখানোর ফাংশন
+        // কার্টের সংখ্যা Navbar এ দেখানো
         function updateCartUI() {
             const cartCountElement = document.getElementById('cart-count');
             if (cartCountElement) {
                 let totalItems = 0;
-                // প্রতিটা আইটেমের quantity যোগ করা
                 for (let i = 0; i < cart.length; i++) {
                     totalItems = totalItems + cart[i].quantity;
                 }
@@ -143,7 +159,7 @@
             }
         }
 
-        // Note: পেজ লোড হওয়ার সাথে সাথে কার্ট আপডেট করা
+        // পেজ লোড হলে কার্ট আপডেট করো
         document.addEventListener('DOMContentLoaded', function() {
             updateCartUI();
         });
