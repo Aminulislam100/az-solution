@@ -79,7 +79,7 @@ body {
 /* Scrolling Banner Style */
 .marquee-banner {
     margin-top: 2px;
-    background: linear-gradient(180deg, #14282e 0%, #091215 100%); /* হিরো সেকশনের সাথে মানানসই ডার্ক টিল/ব্ল্যাক টোন */
+    background: linear-gradient(rgba(8, 176, 218, 0.6), rgba(0, 0, 0, 0.7)); /* হিরো সেকশনের সাথে মানানসই ডার্ক টিল/ব্ল্যাক টোন */
     color: #ff7700; /* উজ্জ্বল প্রফেশনাল কমলা কালার */
     font-size: 1rem;
     font-weight: 700;
