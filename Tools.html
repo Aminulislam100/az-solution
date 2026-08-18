@@ -26,7 +26,6 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link active fw-bold" href="Tools.html">Employee Tools</a></li>
                 </ul>
                 <a href="cart.html" class="btn btn-dark btn-sm position-relative rounded-pill px-3">
@@ -37,7 +36,7 @@
         </div>
     </nav>
 
-    <!-- হেডার -->
+    <!-- Header -->
     <div class="tools-hero text-center px-3">
         <div class="container">
             <h2 class="fw-bold mb-1" style="color: #2c3e50;">Business Data Management</h2>
@@ -45,15 +44,15 @@
         </div>
     </div>
 
-    <!-- লগইন সেকশন (শুরুতে এটা দেখাবে) -->
-    <div id="login-section" class="container flex-grow-1 d-flex align-items-center justify-content-center">
+    <!-- ========== Login Section ========== -->
+    <div id="login-section" class="container flex-grow-1 d-flex align-items-center justify-content-center py-5">
         <div class="login-box text-center w-100">
             <div class="mb-4">
                 <i class="fas fa-lock" style="font-size: 2.8rem; color: #2c3e50;"></i>
             </div>
             <h4 class="fw-bold mb-2" style="color: #2c3e50;">Employee Access Only</h4>
             <p class="text-muted mb-4" style="font-size: 0.9rem;">
-                Please enter the password to view the inventory sheet.
+                পাসওয়ার্ড দিয়ে আনলক করুন
             </p>
 
             <input type="password" 
@@ -65,58 +64,60 @@
             <button onclick="checkPassword()" 
                     class="btn text-white w-100 py-2 rounded-pill fw-bold" 
                     style="background-color: #2c3e50;">
-                Unlock Sheet
+                Unlock
             </button>
 
-            <p id="error-msg" class="text-danger mt-3 mb-0 fw-semibold" style="display: none; font-size: 0.9rem;">
+            <p id="error-msg" class="text-danger mt-3 mb-0 fw-semibold" style="display: none;">
                 Incorrect password! Try again.
             </p>
         </div>
     </div>
 
-    <!-- Google Sheet সেকশন (পাসওয়ার্ড ঠিক হলে দেখাবে) -->
-    <div id="sheet-section" class="container-fluid px-lg-4 mt-3 flex-grow-1" style="display: none;">
-        <div class="row">
-            <div class="col-12">
-                <div class="iframe-container">
-                    <h4 class="tool-title">
-                        <span>
-                            <i class="fas fa-file-excel"></i> AZEM Inventory
-                        </span>
+    <!-- ========== After Unlock Section ========== -->
+    <div id="sheet-section" class="container flex-grow-1 py-5" style="display: none;">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card border text-center p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-file-excel" style="font-size: 3rem; color: #217346;"></i>
+                    </div>
+                    <h4 class="fw-bold mb-2">AZEM Inventory Sheet</h4>
+                    <p class="text-muted mb-4">
+                        নিচের বাটনে ক্লিক করলে Google Sheet নতুন ট্যাবে খুলবে।  
+                        মোবাইল ও কম্পিউটার দুই জায়গাতেই ভালো কাজ করবে।
+                    </p>
 
-                        <div>
-                            <a href="https://docs.google.com/spreadsheets/d/1UnjgO1KSWHcBvgtkQlLSpPDis9EvLOMynEXECUdFpvM/edit?usp=sharing" 
-                               target="_blank" 
-                               class="btn btn-sm btn-light rounded-pill me-2 fw-bold text-primary">
-                                <i class="fas fa-print"></i> Print / Open
-                            </a>
+                    <!-- বড় Open বাটন -->
+                    <a href="https://docs.google.com/spreadsheets/d/1UnjgO1KSWHcBvgtkQlLSpPDis9EvLOMynEXECUdFpvM/edit?usp=sharing" 
+                       target="_blank" 
+                       class="btn btn-success btn-lg w-100 mb-3 py-3 fw-bold">
+                        <i class="fas fa-external-link-alt me-2"></i> Open Inventory Sheet
+                    </a>
 
-                            <button onclick="lockSheet()" class="btn btn-sm btn-outline-light rounded-pill fw-bold">
-                                <i class="fas fa-lock"></i> Lock
-                            </button>
-                        </div>
-                    </h4>
-
-                    <iframe src="https://docs.google.com/spreadsheets/d/1UnjgO1KSWHcBvgtkQlLSpPDis9EvLOMynEXECUdFpvM/edit?usp=sharing"></iframe>
+                    <button onclick="lockSheet()" class="btn btn-outline-secondary w-100">
+                        <i class="fas fa-lock me-1"></i> Lock Again
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-center py-4 mt-auto">
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-3 mt-auto">
         <div class="container text-white">
-            <p class="mb-1"><strong>Proprietor: Aminul Islam</strong></p>
+            <p class="mb-0" style="font-size: 0.95rem;">
+                &copy; 2026 AZEM Sewing & Engineering Works. All Rights Reserved.
+            </p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ========== এই পেজের JavaScript ========== -->
     <script>
-        // Note: সঠিক পাসওয়ার্ড
+        // সঠিক পাসওয়ার্ড
         const CORRECT_PASSWORD = "12345";
 
-        // Note: কার্ট সংখ্যা দেখানোর জন্য
+        // কার্ট সংখ্যা দেখানো
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         function updateCartUI() {
@@ -130,31 +131,29 @@
             }
         }
 
-        // Note: পাসওয়ার্ড চেক করার ফাংশন
+        // পাসওয়ার্ড চেক
         function checkPassword() {
             const enteredPassword = document.getElementById('emp-password').value;
             const errorMsg = document.getElementById('error-msg');
 
             if (enteredPassword === CORRECT_PASSWORD) {
-                // সঠিক হলে লগইন লুকাও, শিট দেখাও
                 document.getElementById('login-section').style.display = 'none';
                 document.getElementById('sheet-section').style.display = 'block';
                 errorMsg.style.display = 'none';
                 document.getElementById('emp-password').value = "";
             } else {
-                // ভুল হলে এরর মেসেজ দেখাও
                 errorMsg.style.display = 'block';
             }
         }
 
-        // Note: Enter চাপলেও পাসওয়ার্ড চেক হবে
+        // Enter চাপলেও কাজ করবে
         function handleEnterKey(event) {
             if (event.key === "Enter") {
                 checkPassword();
             }
         }
 
-        // Note: শিট লক করে আবার লগইন পেজে ফিরে যাওয়া
+        // আবার লক করা
         function lockSheet() {
             document.getElementById('sheet-section').style.display = 'none';
             document.getElementById('login-section').style.display = 'flex';
