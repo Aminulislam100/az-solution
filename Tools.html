@@ -10,9 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-light">
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top">
         <div class="container">
         <a class="navbar-brand fs-5 fw-bold d-flex align-items-center" href="index.html">
@@ -36,7 +35,6 @@
         </div>
     </nav>
 
-    <!-- Header -->
     <div class="tools-hero text-center px-3">
         <div class="container">
             <h2 class="fw-bold mb-1" style="color: #2c3e50;">Business Data Management</h2>
@@ -44,15 +42,14 @@
         </div>
     </div>
 
-    <!-- ========== Login Section ========== -->
     <div id="login-section" class="container flex-grow-1 d-flex align-items-center justify-content-center py-5">
-        <div class="login-box text-center w-100">
+        <div class="login-box text-center w-100 bg-white p-4 rounded shadow-sm" style="max-width: 400px; border: 1px solid #ddd;">
             <div class="mb-4">
                 <i class="fas fa-lock" style="font-size: 2.8rem; color: #2c3e50;"></i>
             </div>
             <h4 class="fw-bold mb-2" style="color: #2c3e50;">Employee Access Only</h4>
-            <p class="text-muted mb-4" style="font-size: 0.9rem;">
-                পাসওয়ার্ড দিয়ে আনলক করুন
+            <p class="text-muted mb-4" style="font-size: 0.95rem;">
+                পাসওয়ার্ড দিয়ে আনলক করুন(12345)
             </p>
 
             <input type="password" 
@@ -73,36 +70,48 @@
         </div>
     </div>
 
-    <!-- ========== After Unlock Section ========== -->
     <div id="sheet-section" class="container flex-grow-1 py-5" style="display: none;">
         <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="card border text-center p-4">
+            <div class="col-lg-10">
+                
+                <div class="card border text-center p-4 mb-4 bg-white shadow-sm">
                     <div class="mb-3">
-                        <i class="fas fa-file-excel" style="font-size: 3rem; color: #217346;"></i>
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: #2c3e50;"></i>
                     </div>
-                    <h4 class="fw-bold mb-2">AZEM Inventory Sheet</h4>
+                    <h4 class="fw-bold mb-2">Sell Management Tools</h4>
                     <p class="text-muted mb-4">
                         নিচের বাটনে ক্লিক করলে Google Sheet নতুন ট্যাবে খুলবে।  
-                        মোবাইল ও কম্পিউটার দুই জায়গাতেই ভালো কাজ করবে।
+                        মোবাইল ও কম্পিউটার দুই জায়গাতেই ভালো কাজ করবে।
                     </p>
 
-                    <!-- বড় Open বাটন -->
                     <a href="https://docs.google.com/spreadsheets/d/1UnjgO1KSWHcBvgtkQlLSpPDis9EvLOMynEXECUdFpvM/edit?usp=sharing" 
                        target="_blank" 
-                       class="btn btn-success btn-lg w-100 mb-3 py-3 fw-bold">
+                       class="btn btn-success btn-lg mx-auto w-100 mb-2 py-3 fw-bold" style="max-width: 400px;">
                         <i class="fas fa-external-link-alt me-2"></i> Open Inventory Sheet
                     </a>
-
-                    <button onclick="lockSheet()" class="btn btn-outline-secondary w-100">
-                        <i class="fas fa-lock me-1"></i> Lock Again
-                    </button>
                 </div>
+
+                <div class="card border mb-4 bg-white shadow-sm overflow-hidden">
+                    <div class="card-header bg-dark text-white py-2">
+                        <h6 class="mb-0 fw-bold"><i class="fas fa-laptop-code me-2"></i> Garment Tools Analytics</h6>
+                    </div>
+                    <div class="card-body p-0">
+                        <iframe src="https://garmenttools-lwdxkuptwgdjd2himupsww.streamlit.app/" 
+                                width="100%" 
+                                height="650px" 
+                                style="border: none;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <button onclick="lockSheet()" class="btn btn-outline-secondary w-100 fw-bold py-2 shadow-sm bg-white">
+                    <i class="fas fa-lock me-1"></i> Lock Again
+                </button>
+
             </div>
         </div>
     </div>
 
-    <!-- ========== Footer ========== -->
     <footer class="bg-secondary text-center py-2 mt-auto">
     <div class="container text-white">
         <div class="d-flex justify-content-center align-items-center gap-2">
@@ -117,7 +126,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // সঠিক পাসওয়ার্ড
+        // সঠিক পাসওয়ার্ড
         const CORRECT_PASSWORD = "12345";
 
         // কার্ট সংখ্যা দেখানো
@@ -134,7 +143,7 @@
             }
         }
 
-        // পাসওয়ার্ড চেক
+        // পাসওয়ার্ড চেক
         function checkPassword() {
             const enteredPassword = document.getElementById('emp-password').value;
             const errorMsg = document.getElementById('error-msg');
