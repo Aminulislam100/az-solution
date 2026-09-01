@@ -12,6 +12,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
 
+    <!-- ========== Navbar ========== -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top">
         <div class="container">
             <a class="navbar-brand fs-5 fw-bold d-flex align-items-center" href="index.html">
@@ -35,6 +36,7 @@
         </div>
     </nav>
 
+    <!-- ========== Header ========== -->
     <div class="tools-hero text-center px-3">
         <div class="container">
             <h2 class="fw-bold mb-1" style="color: #2c3e50;">Business Data Management</h2>
@@ -42,6 +44,7 @@
         </div>
     </div>
 
+    <!-- ========== Login Section ========== -->
     <div id="login-section" class="container flex-grow-1 d-flex align-items-center justify-content-center py-5">
         <div class="login-box text-center w-100 bg-white p-4 rounded shadow-sm" style="max-width: 400px; border: 1px solid #ddd;">
             <div class="mb-4">
@@ -70,10 +73,12 @@
         </div>
     </div>
 
+    <!-- ========== After Unlock Section ========== -->
     <div id="sheet-section" class="container flex-grow-1 py-5" style="display: none;">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 
+                <!-- ১. Sell Management Tools (Google Sheet) -->
                 <div class="card border text-center p-4 mb-4 bg-white shadow-sm">
                     <div class="mb-3">
                         <i class="fas fa-chart-line" style="font-size: 3rem; color: #2c3e50;"></i>
@@ -87,10 +92,11 @@
                     <a href="https://docs.google.com/spreadsheets/d/1UnjgO1KSWHcBvgtkQlLSpPDis9EvLOMynEXECUdFpvM/edit?usp=sharing" 
                        target="_blank" 
                        class="btn btn-success btn-lg mx-auto w-100 mb-2 py-3 fw-bold" style="max-width: 400px;">
-                        <i class="fas fa-external-link-alt me-2"></i> Open Inventory Sheet
+                        <i class="fas fa-external-link-alt me-2"></i> Open Sell management sheet
                     </a>
                 </div>
 
+                <!-- ২. Garment Tools Analytics (Streamlit App) -->
                 <div class="card border text-center p-4 mb-4 bg-white shadow-sm">
                     <div class="mb-3">
                         <i class="fas fa-laptop-code" style="font-size: 3rem; color: #0d6efd;"></i>
@@ -107,22 +113,7 @@
                     </a>
                 </div>
 
-                <div class="card border mb-4 bg-white shadow-sm overflow-hidden">
-                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-2">
-                        <h6 class="mb-0 fw-bold"><i class="fas fa-desktop me-2"></i> Live Preview</h6>
-                        <a href="https://garmenttools-lwdxkuptwgdjd2himupsww.streamlit.app/" target="_blank" class="btn btn-sm btn-outline-light">
-                            <i class="fas fa-expand me-1"></i> Full Screen
-                        </a>
-                    </div>
-                    <div class="card-body p-0">
-                        <iframe src="https://garmenttools-lwdxkuptwgdjd2himupsww.streamlit.app/" 
-                                width="100%" 
-                                height="600px" 
-                                style="border: none;">
-                        </iframe>
-                    </div>
-                </div>
-
+                <!-- লক বাটন -->
                 <button onclick="lockSheet()" class="btn btn-outline-secondary w-100 fw-bold py-2 shadow-sm bg-white" style="max-width: 400px; margin: 0 auto; display: block;">
                     <i class="fas fa-lock me-1"></i> Lock Again
                 </button>
@@ -131,6 +122,7 @@
         </div>
     </div>
 
+    <!-- ========== Footer ========== -->
     <footer class="bg-secondary text-center py-2 mt-auto">
         <div class="container text-white">
             <div class="d-flex justify-content-center align-items-center gap-2">
@@ -142,8 +134,10 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- JavaScript -->
     <script>
         // সঠিক পাসওয়ার্ড
         const CORRECT_PASSWORD = "12345";
