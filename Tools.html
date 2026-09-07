@@ -4,34 +4,59 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Smart Business Tools - AZ Solution</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
+
+    <title>
+        Smart Business Tools - AZ Solution
+    </title>
+
+
+    <!-- =========================================
+         BOOTSTRAP
+    ========================================== -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
+
+    <!-- =========================================
+         FONT AWESOME
+    ========================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Google Fonts -->
+
+    <!-- =========================================
+         GOOGLE FONTS
+    ========================================== -->
+
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================================
+         YOUR MAIN CSS
+    ========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css">
 
 
     <style>
 
-        /* =====================================================
+
+        /* =========================================
            BODY
-        ===================================================== */
+        ========================================== */
 
         body {
 
@@ -43,9 +68,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================================
            HERO
-        ===================================================== */
+        ========================================== */
 
         .tools-hero {
 
@@ -58,29 +83,34 @@
                     #e9ecef
                 );
 
-            border-bottom: 1px solid #ddd;
+            border-bottom:
+                1px solid #ddd;
 
         }
 
 
-        /* =====================================================
+        /* =========================================
            TOOL BUTTON
-        ===================================================== */
+        ========================================== */
 
         .tool-button {
 
-            transition: all 0.25s ease;
+            transition:
+                all 0.25s ease;
 
-            border-radius: 12px;
+            border-radius:
+                12px;
 
-            min-height: 120px;
+            min-height:
+                120px;
 
         }
 
 
         .tool-button:hover {
 
-            transform: translateY(-4px);
+            transform:
+                translateY(-4px);
 
             box-shadow:
                 0 8px 20px
@@ -93,71 +123,93 @@
 
             box-shadow:
                 0 0 0 3px
-                rgba(13, 110, 253, .2);
+                rgba(13, 110, 253, .20);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
 
 
-        /* =====================================================
-           PREVIEW
-        ===================================================== */
+        /* =========================================
+           PREVIEW CONTAINER
+        ========================================== */
 
         .preview-container {
 
-            display: none;
+            display:
+                none;
 
-            margin-top: 30px;
+            margin-top:
+                30px;
 
         }
 
 
+        /* =========================================
+           IFRAME BOX
+        ========================================== */
+
         .iframe-box {
 
-            width: 100%;
+            width:
+                100%;
 
-            height: 120vh;
+            height:
+                75vh;
 
-            min-height: 500px;
+            min-height:
+                500px;
 
-            border: 1px solid #ddd;
+            border:
+                1px solid #ddd;
 
-            border-radius: 12px;
+            border-radius:
+                12px;
 
-            overflow: hidden;
+            overflow:
+                hidden;
 
-            background: #fff;
+            background:
+                #ffffff;
 
-            position: relative;
+            position:
+                relative;
 
         }
 
 
         .iframe-box iframe {
 
-            width: 100%;
+            width:
+                100%;
 
-            height: 100%;
+            height:
+                100%;
 
-            border: none;
+            border:
+                none;
 
-            display: block;
+            display:
+                block;
 
-            background: #fff;
+            background:
+                #ffffff;
 
         }
 
 
-        /* =====================================================
+        /* =========================================
            LOGIN BOX
-        ===================================================== */
+        ========================================== */
 
         .login-box {
 
-            border-radius: 18px;
+            border-radius:
+                18px;
 
-            transition: all 0.25s ease;
+            transition:
+                all 0.25s ease;
 
         }
 
@@ -166,25 +218,28 @@
 
             box-shadow:
                 0 12px 30px
-                rgba(0, 0, 0, 0.08) !important;
+                rgba(0, 0, 0, 0.08)
+                !important;
 
         }
 
 
-        /* =====================================================
-           LOGIN BUTTON
-        ===================================================== */
+        /* =========================================
+           UNLOCK BUTTON
+        ========================================== */
 
         .unlock-btn {
 
-            transition: all 0.25s ease;
+            transition:
+                all 0.25s ease;
 
         }
 
 
         .unlock-btn:hover {
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
             box-shadow:
                 0 6px 15px
@@ -193,29 +248,33 @@
         }
 
 
-        /* =====================================================
+        /* =========================================
            OPEN APP BUTTON
-        ===================================================== */
+        ========================================== */
 
         .open-app-btn {
 
-            min-width: 590px;
+            min-width:
+                220px;
 
             padding:
-                11px 25px;
+                13px 30px;
 
-            border-radius: 50px;
+            border-radius:
+                50px;
 
-            font-weight: 600;
+            font-weight:
+                600;
 
-            font-size: 15px;
+            font-size:
+                16px;
 
             transition:
                 all 0.25s ease;
 
             box-shadow:
-                0 3px 8px
-                rgba(25, 135, 84, 0.15);
+                0 4px 12px
+                rgba(25, 135, 84, 0.20);
 
         }
 
@@ -226,19 +285,20 @@
                 translateY(-2px);
 
             box-shadow:
-                0 7px 18px
-                rgba(25, 135, 84, 0.25);
+                0 8px 20px
+                rgba(25, 135, 84, 0.30);
 
         }
 
 
-        /* =====================================================
+        /* =========================================
            LOCK BUTTON
-        ===================================================== */
+        ========================================== */
 
         .lock-btn {
 
-            border-radius: 50px;
+            border-radius:
+                50px;
 
             transition:
                 all 0.25s ease;
@@ -254,57 +314,286 @@
         }
 
 
-        /* =====================================================
+        /* =========================================
            PASSWORD INFO
-        ===================================================== */
+        ========================================== */
 
         .password-info {
 
-            font-size: 13px;
+            font-size:
+                13px;
 
-            color: #6c757d;
+            color:
+                #6c757d;
 
         }
 
 
         .password-info strong {
 
-            color: #2c3e50;
+            color:
+                #2c3e50;
+
+            background:
+                #f1f3f5;
+
+            padding:
+                4px 10px;
+
+            border-radius:
+                6px;
+
+            margin-left:
+                4px;
 
         }
 
 
-        /* =====================================================
+        /* =========================================
+           FULL FUNCTIONALITY NOTE
+        ========================================== */
+
+        .app-preview-note {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                12px;
+
+            padding:
+                15px 18px;
+
+            margin:
+                15px 15px 0;
+
+            background:
+                #f0f7ff;
+
+            border:
+                1px solid #cfe2ff;
+
+            border-left:
+                4px solid #0d6efd;
+
+            border-radius:
+                10px;
+
+            color:
+                #334155;
+
+        }
+
+
+        .app-preview-note i {
+
+            color:
+                #0d6efd;
+
+            font-size:
+                20px;
+
+            margin-top:
+                2px;
+
+        }
+
+
+        .app-preview-note div {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                3px;
+
+        }
+
+
+        .app-preview-note strong {
+
+            color:
+                #0d6efd;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .app-preview-note span {
+
+            font-size:
+                13.5px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        /* =========================================
+           STREAMLIT LOADING NOTE
+        ========================================== */
+
+        .streamlit-loading-note {
+
+            position:
+                absolute;
+
+            top:
+                20px;
+
+            left:
+                20px;
+
+            right:
+                20px;
+
+            z-index:
+                10;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            padding:
+                16px 20px;
+
+            background:
+                #fff8e1;
+
+            border:
+                1px solid #ffe69c;
+
+            border-left:
+                5px solid #ffc107;
+
+            border-radius:
+                10px;
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.08);
+
+        }
+
+
+        .loading-spinner {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                #fff3cd;
+
+            color:
+                #d39e00;
+
+            font-size:
+                22px;
+
+            flex-shrink:
+                0;
+
+        }
+
+
+        .streamlit-loading-note strong {
+
+            display:
+                block;
+
+            color:
+                #856404;
+
+            font-size:
+                15px;
+
+            margin-bottom:
+                4px;
+
+        }
+
+
+        .streamlit-loading-note p {
+
+            margin:
+                0;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+
+            color:
+                #6c5a20;
+
+        }
+
+
+        /* =========================================
            FOOTER
-        ===================================================== */
+        ========================================== */
 
         footer {
 
             border-top:
                 1px solid
-                rgba(255,255,255,0.15);
+                rgba(255, 255, 255, 0.15);
 
         }
 
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+        /* =========================================
+           MOBILE RESPONSIVE
+        ========================================== */
 
         @media (max-width: 768px) {
 
+
             .tools-hero {
 
-                padding: 25px 0;
+                padding:
+                    25px 0;
 
             }
 
 
             .iframe-box {
 
-                height: 70vh;
+                height:
+                    70vh;
 
-                min-height: 450px;
+                min-height:
+                    450px;
 
             }
 
@@ -319,35 +608,102 @@
 
             .open-app-btn {
 
-                width: 100%;
+                width:
+                    100%;
 
-                min-width: 100%;
+                min-width:
+                    100%;
 
             }
 
 
-            .preview-title {
+        }
 
-                width: 100%;
+
+        @media (max-width: 576px) {
+
+
+            .streamlit-loading-note {
+
+                top:
+                    10px;
+
+                left:
+                    10px;
+
+                right:
+                    10px;
+
+                padding:
+                    12px;
+
+                gap:
+                    10px;
+
+            }
+
+
+            .loading-spinner {
+
+                width:
+                    38px;
+
+                height:
+                    38px;
+
+                font-size:
+                    18px;
+
+            }
+
+
+            .streamlit-loading-note strong {
+
+                font-size:
+                    13px;
+
+            }
+
+
+            .streamlit-loading-note p {
+
+                font-size:
+                    12px;
+
+            }
+
+
+            .app-preview-note {
+
+                margin:
+                    10px 10px 0;
+
+                padding:
+                    12px;
 
             }
 
         }
 
+
     </style>
+
 
 </head>
 
 
-<body class="d-flex flex-column min-vh-100 bg-light">
+
+<body
+    class="d-flex flex-column min-vh-100 bg-light">
 
 
-    <!-- =====================================================
+    <!-- =========================================
          NAVBAR
-    ====================================================== -->
+    ========================================== -->
 
     <nav
         class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2 sticky-top">
+
 
         <div class="container">
 
@@ -358,6 +714,7 @@
                 class="navbar-brand fs-5 fw-bold d-flex align-items-center"
                 href="index.html">
 
+
                 <img
                     src="images/logo1.png"
                     alt="Logo"
@@ -366,7 +723,9 @@
                         margin-right: 10px;
                     ">
 
+
             </a>
+
 
 
             <!-- MOBILE MENU -->
@@ -377,9 +736,12 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
 
+
                 <span class="navbar-toggler-icon"></span>
 
+
             </button>
+
 
 
             <!-- NAVIGATION -->
@@ -447,15 +809,18 @@
                 </ul>
 
 
+
                 <!-- CART -->
 
                 <a
                     href="cart.html"
                     class="btn btn-dark btn-sm position-relative rounded-pill px-3">
 
+
                     <i
                         class="fas fa-shopping-bag me-1">
                     </i>
+
 
                     Cart
 
@@ -468,28 +833,33 @@
 
                     </span>
 
+
                 </a>
 
 
             </div>
 
+
         </div>
+
 
     </nav>
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          HEADER
-    ====================================================== -->
+    ========================================== -->
 
     <div
         class="tools-hero text-center px-3">
+
 
         <div class="container">
 
 
             <div class="mb-2">
+
 
                 <i
                     class="fas fa-briefcase"
@@ -499,6 +869,7 @@
                     ">
                 </i>
 
+
             </div>
 
 
@@ -506,27 +877,33 @@
                 class="fw-bold mb-2"
                 style="color: #2c3e50;">
 
+
                 Smart Business Tools
+
 
             </h2>
 
 
-            <p class="text-muted mb-0">
+            <p
+                class="text-muted mb-0">
+
 
                 Attendance, Sales Management and Fabric Quality Control Tools
+
 
             </p>
 
 
         </div>
 
+
     </div>
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          LOGIN SECTION
-    ====================================================== -->
+    ========================================== -->
 
     <div
         id="login-section"
@@ -545,6 +922,7 @@
 
             <div class="mb-4">
 
+
                 <i
                     class="fas fa-lock"
                     style="
@@ -553,7 +931,9 @@
                     ">
                 </i>
 
+
             </div>
+
 
 
             <!-- TITLE -->
@@ -562,18 +942,25 @@
                 class="fw-bold mb-2"
                 style="color: #2c3e50;">
 
+
                 Employee Access Only
+
 
             </h4>
 
 
+
             <!-- DESCRIPTION -->
 
-            <p class="text-muted mb-2">
+            <p
+                class="text-muted mb-2">
+
 
                 পাসওয়ার্ড দিয়ে Smart Business Tools আনলক করুন
 
+
             </p>
+
 
 
             <!-- PASSWORD -->
@@ -581,10 +968,16 @@
             <div
                 class="password-info mb-4">
 
+
                 Password:
-                <strong>12345</strong>
+
+                <strong>
+                    12345
+                </strong>
+
 
             </div>
+
 
 
             <!-- PASSWORD INPUT -->
@@ -602,19 +995,24 @@
                 onkeypress="handleEnterKey(event)">
 
 
+
             <!-- UNLOCK BUTTON -->
 
             <button
                 onclick="checkPassword()"
                 class="btn btn-dark unlock-btn w-100 py-2 rounded-pill fw-bold">
 
+
                 <i
                     class="fas fa-unlock me-2">
                 </i>
 
+
                 Unlock Tools
 
+
             </button>
+
 
 
             <!-- ERROR -->
@@ -624,20 +1022,23 @@
                 class="text-danger mt-3 mb-0 fw-semibold"
                 style="display: none;">
 
+
                 Incorrect password! Try again.
+
 
             </p>
 
 
         </div>
 
+
     </div>
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          TOOLS SECTION
-    ====================================================== -->
+    ========================================== -->
 
     <div
         id="sheet-section"
@@ -649,26 +1050,34 @@
 
         <div class="text-center mb-4">
 
-            <h3 class="fw-bold">
+
+            <h3
+                class="fw-bold">
+
 
                 Choose a Tool
+
 
             </h3>
 
 
-            <p class="text-muted">
+            <p
+                class="text-muted">
+
 
                 নিচের যেকোনো Tool নির্বাচন করুন
 
+
             </p>
+
 
         </div>
 
 
 
-        <!-- =================================================
+        <!-- =====================================
              TOOL BUTTONS
-        ================================================== -->
+        ====================================== -->
 
         <div
             class="row g-4 justify-content-center">
@@ -677,6 +1086,7 @@
             <!-- ATTENDANCE -->
 
             <div class="col-md-4">
+
 
                 <button
                     onclick="openTool('attendance', this)"
@@ -691,19 +1101,24 @@
                     <h5
                         class="fw-bold mb-1">
 
+
                         Attendance Tools
+
 
                     </h5>
 
 
                     <small>
 
+
                         Face Attendance System
+
 
                     </small>
 
 
                 </button>
+
 
             </div>
 
@@ -712,6 +1127,7 @@
             <!-- SELL MANAGEMENT -->
 
             <div class="col-md-4">
+
 
                 <button
                     onclick="openTool('sell', this)"
@@ -726,19 +1142,24 @@
                     <h5
                         class="fw-bold mb-1">
 
+
                         Sell Management Tools
+
 
                     </h5>
 
 
                     <small>
 
+
                         Sales & Inventory Sheet
+
 
                     </small>
 
 
                 </button>
+
 
             </div>
 
@@ -747,6 +1168,7 @@
             <!-- FABRIC QC -->
 
             <div class="col-md-4">
+
 
                 <button
                     onclick="openTool('fabric', this)"
@@ -761,19 +1183,24 @@
                     <h5
                         class="fw-bold mb-1">
 
+
                         Fabric QC Checker
+
 
                     </h5>
 
 
                     <small>
 
+
                         Fabric Quality Control System
+
 
                     </small>
 
 
                 </button>
+
 
             </div>
 
@@ -782,9 +1209,9 @@
 
 
 
-        <!-- =================================================
-             PREVIEW
-        ================================================== -->
+        <!-- =====================================
+             PREVIEW SECTION
+        ====================================== -->
 
         <div
             id="preview-container"
@@ -803,14 +1230,17 @@
 
                     <h5
                         id="preview-title"
-                        class="fw-bold mb-0 preview-title">
+                        class="fw-bold mb-0">
+
 
                         Tool Preview
+
 
                     </h5>
 
 
-                    <!-- OPEN APP -->
+
+                    <!-- OPEN APP BUTTON -->
 
                     <a
                         id="open-app-button"
@@ -819,11 +1249,14 @@
                         rel="noopener noreferrer"
                         class="btn btn-success open-app-btn">
 
+
                         <i
                             class="fas fa-external-link-alt me-2">
                         </i>
 
+
                         Open App
+
 
                     </a>
 
@@ -832,7 +1265,44 @@
 
 
 
-                <!-- IFRAME -->
+                <!-- =================================
+                     FULL FUNCTIONALITY NOTE
+                ================================== -->
+
+                <div
+                    class="app-preview-note">
+
+
+                    <i
+                        class="fas fa-info-circle">
+                    </i>
+
+
+                    <div>
+
+
+                        <strong>
+                            For Full Functionality
+                        </strong>
+
+
+                        <span>
+
+                            Click the <strong>Open App</strong> button to open and operate the application with all features and full functionality.
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     IFRAME BODY
+                ================================== -->
 
                 <div
                     class="card-body p-2">
@@ -842,12 +1312,64 @@
                         class="iframe-box">
 
 
+                        <!-- =========================
+                             STREAMLIT LOADING NOTE
+                        ========================== -->
+
+                        <div
+                            id="streamlit-loading-note"
+                            class="streamlit-loading-note"
+                            style="display: none;">
+
+
+                            <div
+                                class="loading-spinner">
+
+
+                                <i
+                                    class="fas fa-spinner fa-spin">
+                                </i>
+
+
+                            </div>
+
+
+
+                            <div>
+
+
+                                <strong>
+
+                                    Please Wait While the Application Loads
+
+                                </strong>
+
+
+                                <p>
+
+                                    This application is hosted on Streamlit. The server may take a few moments to start and load the application. Please wait approximately 1–2 minutes.
+
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =========================
+                             APP IFRAME
+                        ========================== -->
+
                         <iframe
                             id="tool-iframe"
                             src=""
                             title="Smart Business Tool Preview"
                             allow="camera; microphone; fullscreen"
                             allowfullscreen>
+
                         </iframe>
 
 
@@ -864,9 +1386,9 @@
 
 
 
-        <!-- =================================================
+        <!-- =====================================
              LOCK AGAIN
-        ================================================== -->
+        ====================================== -->
 
         <button
             onclick="lockSheet()"
@@ -882,6 +1404,7 @@
                 class="fas fa-lock me-1">
             </i>
 
+
             Lock Again
 
 
@@ -892,9 +1415,9 @@
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          FOOTER
-    ====================================================== -->
+    ========================================== -->
 
     <footer
         class="bg-secondary text-center py-2 mt-auto">
@@ -945,9 +1468,9 @@
 
 
 
-    <!-- =====================================================
-         BOOTSTRAP JS
-    ====================================================== -->
+    <!-- =========================================
+         BOOTSTRAP JAVASCRIPT
+    ========================================== -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
@@ -955,28 +1478,31 @@
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+    <!-- =========================================
+         MAIN JAVASCRIPT
+    ========================================== -->
 
     <script>
 
 
-        // =====================================================
-        // PASSWORD
-        // =====================================================
+        /* =========================================
+           PASSWORD
+        ========================================== */
 
-        const CORRECT_PASSWORD = "12345";
+        const CORRECT_PASSWORD =
+            "12345";
 
 
 
-        // =====================================================
-        // CART
-        // =====================================================
+        /* =========================================
+           CART
+        ========================================== */
 
         let cart =
             JSON.parse(
-                localStorage.getItem('cart')
+                localStorage.getItem(
+                    'cart'
+                )
             ) || [];
 
 
@@ -993,7 +1519,8 @@
             if (cartCountElement) {
 
 
-                let totalItems = 0;
+                let totalItems =
+                    0;
 
 
                 for (
@@ -1018,13 +1545,14 @@
 
             }
 
+
         }
 
 
 
-        // =====================================================
-        // LOGIN
-        // =====================================================
+        /* =========================================
+           LOGIN
+        ========================================== */
 
         function checkPassword() {
 
@@ -1050,7 +1578,7 @@
             ) {
 
 
-                // Hide login
+                /* Hide Login */
 
                 document
                     .getElementById(
@@ -1060,7 +1588,8 @@
                     'none';
 
 
-                // Show tools
+
+                /* Show Tools */
 
                 document
                     .getElementById(
@@ -1070,19 +1599,22 @@
                     'block';
 
 
-                // Hide error
+
+                /* Hide Error */
 
                 errorMsg.style.display =
                     'none';
 
 
-                // Clear password
+
+                /* Clear Password */
 
                 document
                     .getElementById(
                         'emp-password'
                     )
-                    .value = "";
+                    .value =
+                    "";
 
 
             }
@@ -1096,19 +1628,21 @@
 
             }
 
+
         }
 
 
 
-        // =====================================================
-        // ENTER KEY
-        // =====================================================
+        /* =========================================
+           ENTER KEY
+        ========================================== */
 
         function handleEnterKey(event) {
 
 
             if (
-                event.key === "Enter"
+                event.key ===
+                "Enter"
             ) {
 
 
@@ -1117,13 +1651,53 @@
 
             }
 
+
         }
 
 
 
-        // =====================================================
-        // OPEN TOOL
-        // =====================================================
+        /* =========================================
+           IFRAME LOAD EVENT
+        ========================================== */
+
+        const toolIframe =
+            document.getElementById(
+                'tool-iframe'
+            );
+
+
+        toolIframe.addEventListener(
+            'load',
+            function() {
+
+
+                const loadingNote =
+                    document.getElementById(
+                        'streamlit-loading-note'
+                    );
+
+
+                setTimeout(
+                    function() {
+
+
+                        loadingNote.style.display =
+                            'none';
+
+
+                    },
+                    2000
+                );
+
+
+            }
+        );
+
+
+
+        /* =========================================
+           OPEN TOOL
+        ========================================== */
 
         function openTool(
             tool,
@@ -1132,37 +1706,39 @@
 
 
             const iframe =
-                document
-                    .getElementById(
-                        'tool-iframe'
-                    );
+                document.getElementById(
+                    'tool-iframe'
+                );
 
 
             const previewContainer =
-                document
-                    .getElementById(
-                        'preview-container'
-                    );
+                document.getElementById(
+                    'preview-container'
+                );
 
 
             const previewTitle =
-                document
-                    .getElementById(
-                        'preview-title'
-                    );
+                document.getElementById(
+                    'preview-title'
+                );
 
 
             const openButton =
-                document
-                    .getElementById(
-                        'open-app-button'
-                    );
+                document.getElementById(
+                    'open-app-button'
+                );
+
+
+            const loadingNote =
+                document.getElementById(
+                    'streamlit-loading-note'
+                );
 
 
 
-            // -------------------------------------------------
-            // REMOVE ACTIVE
-            // -------------------------------------------------
+            /* =====================================
+               REMOVE ACTIVE BUTTON
+            ====================================== */
 
             document
                 .querySelectorAll(
@@ -1182,9 +1758,7 @@
 
 
 
-            // -------------------------------------------------
-            // SELECTED BUTTON
-            // -------------------------------------------------
+            /* Selected Button */
 
             button.classList.add(
                 'active'
@@ -1192,12 +1766,13 @@
 
 
 
-            // =================================================
-            // ATTENDANCE
-            // =================================================
+            /* =====================================
+               ATTENDANCE
+            ====================================== */
 
             if (
-                tool === 'attendance'
+                tool ===
+                'attendance'
             ) {
 
 
@@ -1205,13 +1780,22 @@
                     'Attendance Tools Preview';
 
 
-                // Streamlit Embed
+
+                /* Show Streamlit Note */
+
+                loadingNote.style.display =
+                    'flex';
+
+
+
+                /* Streamlit Embed */
 
                 iframe.src =
                     'https://face-attendance-akbcykn9jdmpwesnmo48uo.streamlit.app/?embed=true';
 
 
-                // Normal App URL
+
+                /* Open Full App */
 
                 openButton.href =
                     'https://face-attendance-akbcykn9jdmpwesnmo48uo.streamlit.app/';
@@ -1221,12 +1805,13 @@
 
 
 
-            // =================================================
-            // SELL MANAGEMENT
-            // =================================================
+            /* =====================================
+               SELL MANAGEMENT
+            ====================================== */
 
             else if (
-                tool === 'sell'
+                tool ===
+                'sell'
             ) {
 
 
@@ -1234,8 +1819,17 @@
                     'Sell Management Tools Preview';
 
 
+
+                /* Hide Streamlit Note */
+
+                loadingNote.style.display =
+                    'none';
+
+
+
                 iframe.src =
                     'https://docs.google.com/spreadsheets/d/e/2PACX-1vTdJHApB4HjjeliNVsahaax9YtMOgMMO2g7RsdSmeP477hBSZQWXzpwlrLOLjc8d9Fa0iAqX1O_FFgu/pubhtml?widget=true&headers=false';
+
 
 
                 openButton.href =
@@ -1246,12 +1840,13 @@
 
 
 
-            // =================================================
-            // FABRIC QC
-            // =================================================
+            /* =====================================
+               FABRIC QC
+            ====================================== */
 
             else if (
-                tool === 'fabric'
+                tool ===
+                'fabric'
             ) {
 
 
@@ -1259,13 +1854,22 @@
                     'Fabric QC Checker Preview';
 
 
-                // Streamlit Embed
+
+                /* Show Streamlit Note */
+
+                loadingNote.style.display =
+                    'flex';
+
+
+
+                /* Streamlit Embed */
 
                 iframe.src =
                     'https://fabricqc-z52as3ugcbcccwb3irzuapp.streamlit.app/?embed=true';
 
 
-                // Normal App URL
+
+                /* Open Full App */
 
                 openButton.href =
                     'https://fabricqc-z52as3ugcbcccwb3irzuapp.streamlit.app/';
@@ -1275,18 +1879,18 @@
 
 
 
-            // -------------------------------------------------
-            // SHOW PREVIEW
-            // -------------------------------------------------
+            /* =====================================
+               SHOW PREVIEW
+            ====================================== */
 
             previewContainer.style.display =
                 'block';
 
 
 
-            // -------------------------------------------------
-            // SCROLL
-            // -------------------------------------------------
+            /* =====================================
+               SMOOTH SCROLL
+            ====================================== */
 
             setTimeout(
                 function() {
@@ -1313,14 +1917,14 @@
 
 
 
-        // =====================================================
-        // LOCK AGAIN
-        // =====================================================
+        /* =========================================
+           LOCK AGAIN
+        ========================================== */
 
         function lockSheet() {
 
 
-            // Hide tools
+            /* Hide Tools */
 
             document
                 .getElementById(
@@ -1330,7 +1934,8 @@
                 'none';
 
 
-            // Show login
+
+            /* Show Login */
 
             document
                 .getElementById(
@@ -1340,16 +1945,19 @@
                 'flex';
 
 
-            // Stop iframe
+
+            /* Stop Iframe */
 
             document
                 .getElementById(
                     'tool-iframe'
                 )
-                .src = "";
+                .src =
+                "";
 
 
-            // Hide preview
+
+            /* Hide Preview */
 
             document
                 .getElementById(
@@ -1359,16 +1967,30 @@
                 'none';
 
 
-            // Clear password
+
+            /* Hide Loading Note */
+
+            document
+                .getElementById(
+                    'streamlit-loading-note'
+                )
+                .style.display =
+                'none';
+
+
+
+            /* Clear Password */
 
             document
                 .getElementById(
                     'emp-password'
                 )
-                .value = "";
+                .value =
+                "";
 
 
-            // Remove active
+
+            /* Remove Active */
 
             document
                 .querySelectorAll(
@@ -1391,9 +2013,9 @@
 
 
 
-        // =====================================================
-        // PAGE LOAD
-        // =====================================================
+        /* =========================================
+           PAGE LOAD
+        ========================================== */
 
         document.addEventListener(
             'DOMContentLoaded',
